@@ -1,0 +1,15 @@
+# P1
+- CS3310 Operating Systems, Section 1
+- Davis Brooks
+- 9/8/2026
+
+## Development Environment
+Developed in C. Built and tested by connecting to John with ssh in VS code.
+
+## Lessons Learned
+1. Be careful when working with character pointers and character arrays in C. Using those are much less intuitave than using strings.
+2. I need to be more careful when I'm writting my code. Often I blunder ahead instead of taking my time.
+3. Using the ssh plugin in vs code is very useful. I ought to use it more often to program in John.
+
+## Completion Statement
+I hearby affirm that I, Davis Brooks, was the one who completed this assignment. No man, woman, beast, alien, Cow, or LLM completed this assignment for me.
