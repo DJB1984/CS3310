@@ -85,21 +85,20 @@ int main() {
     int listen_fd, comm_fd;
     struct sockaddr_in servaddr;
  
-    //Open the socket.
+    //Open the socket. Bind and listen on the port.
     listen_fd = socket(AF_INET, SOCK_STREAM, 0);
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_addr.s_addr = htons(INADDR_ANY);
     servaddr.sin_port = htons(39876);
     bind(listen_fd, (struct sockaddr *) &servaddr, sizeof(servaddr));
+    listen(listen_fd, 10);
 
     printf("The server is running...\n");
     printf("Text sent to this server will be encrypted it into Cow Code.\n");
  
-    //Listens for the client, converts received data to cow code, closes the 
-    //connection, and repeats.
+    //Accepts data from the client, converts the received data to cow code, closes connection, and repeats.
     while(1) {
-        listen(listen_fd, 10);
  
         comm_fd = accept(listen_fd, (struct sockaddr*) NULL, NULL);
  
